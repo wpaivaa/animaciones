@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Multimedia 2026 : 52 Videojuegos Web de Costumbres Piuranas</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --bg-color: #fcfbf9;
+            --text-color: #333333;
+            --border-color: #e0dcd3;
+            --code-bg: #f4f1ea;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header-banner {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+        
+        .header-banner h1 {
+            margin: 0;
+            font-size: 24pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .header-banner p {
+            margin: 10px 0 0 0;
+            font-size: 13pt;
+            color: #ecf0f1;
+            font-style: italic;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .intro-box {
+            background-color: #ffffff;
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            border-radius: 4px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 16pt;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 6px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: var(--accent-color);
+            font-size: 13pt;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 11pt;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            font-size: 11pt;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .game-grid {
+            margin-top: 20px;
+        }
+        
+        .game-item {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        
+        .game-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 11.5pt;
+            margin-bottom: 5px;
+        }
+        
+        .game-levels {
+            font-size: 10.5pt;
+            padding-left: 15px;
+            margin: 5px 0 0 0;
+            color: #555555;
+        }
+        
+        .math-code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10pt;
+            font-weight: bold;
+            color: #c0392b;
+        }
+        
+        pre {
+            background-color: var(--code-bg);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 10pt;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 10.5pt;
+            background: #ffffff;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: left;
+            padding: 12px;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f8f5;
+        }
+        
+        .badge {
+            display: inline-block;
+            background-color: #e67e22;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 9pt;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 10pt;
+            color: #7f8c8d;
+            border-top: 1px solid var(--border-color);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>Instrucciones para Proyectos de Videojuegos Web</h1>
+        <p>Dr. Walter Richard Paiva Ayala. Estructura Técnica, 52 Ideas de la Región Piura.</p>
+        <p> Cada alumno seleccionará un idea de videojuego de los 52 propuestos y lo subirá en la plataforma virtual.</p>
+    </div>
+
+    <div class="container">
+        <div class="intro-box">
+            <p><strong>Propósito del Manual:</strong> Este documento ha sido diseñado como una guía metodológica y técnica completa para estudiantes y desarrolladores web. Presenta las bases arquitectónicas de integración entre el Frontend interactivo (<span class="math-code">HTML5</span>, <span class="math-code">Canvas</span>, <span class="math-code">CSS3</span>, <span class="math-code">JavaScript</span>) y el Backend transaccional (<span class="math-code">MySQL</span>) a través de un catálogo de <strong>52 ideas lúdicas de dos niveles</strong> fundamentadas rigurosamente en la cultura, geografía, folclor y dinámicas sociales de la Región Piura.</p>
+        </div>
+
+        <h2>1. Arquitectura del Sistema e Infraestructura Técnica</h2>
+        <p>Cada videojuego propuesto debe responder de forma estricta a un modelo de comunicación cliente-servidor desacoplado. A continuación se detallan las responsabilidades de cada capa tecnológica:</p>
+        <ul>
+            <li><strong>Capa de Presentación e Interacción (Frontend):</strong> Desarrollada en un único flujo web que renderiza un lienzo de dibujo dinámico mediante la API <span class="math-code">&lt;canvas&gt;</span> de HTML5. JavaScript gestiona el bucle principal del juego (<em>Game Loop</em>), la actualización de coordenadas físicas, los eventos del teclado/ratón, la detección analítica de colisiones y la bifurcación lógica entre el Nivel 1 y el Nivel 2.</li>
+            <li><strong>Capa de Persistencia y Datos (Backend + MySQL):</strong> Al completarse el segundo nivel de juego, se ejecuta una petición asíncrona estructurada (<span class="math-code">fetch()</span> o <span class="math-code">XMLHttpRequest</span>) en formato JSON, transfiriendo los metadatos de la sesión al servidor. Un script intermedio (por ejemplo, en PHP o Node.js) valida los datos y ejecuta sentencias preparadas hacia el motor relacional MySQL.</li>
+        </ul>
+
+        <h3>Diseño del Esquema de Base de Datos Relacional</h3>
+        <p>Para asegurar la escalabilidad de cualquiera de los 52 videojuegos, se debe instanciar la siguiente estructura de tabla unificada para la gestión de récords y analíticas de sesión de usuario:</p>
+        <pre><code>CREATE DATABASE IF NOT EXISTS juego_piurano_db;
+USE juego_piurano_db;
+
+CREATE TABLE IF NOT EXISTS tabla_records (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_jugador VARCHAR(50) NOT NULL,
+    puntaje_total INT NOT NULL,
+    tiempo_segundos INT NOT NULL,
+    nivel_alcanzado INT DEFAULT 2,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;</code></pre>
+
+        <h2>2. Catálogo de 52 Ideas de Videojuegos de Dos Niveles (Identidad Piurana)</h2>
+        <p>El siguiente compendio presenta las mecánicas y el alcance secuencial para los dos niveles reglamentarios de cada propuesta lúdica:</p>
+
+        <div class="game-grid">
+            <!-- Juegos Nuevos Solicitados -->
+            <div class="game-item" style="border-left: 5px solid #27ae60;">
+                <div class="game-title">1. El Dilema del Voto Ciudadano (Simulador de Elecciones Regionales) <span class="badge">Nuevo</span></div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> El jugador recorre una plaza piurana recolectando folletos con propuestas reales de dos candidatos opuestos, clasificándolos y detectando noticias falsas en un límite de tiempo.<br>
+                    <strong>Nivel 2:</strong> Simulación interactiva del acto de votación en Canvas. El jugador ingresa a la cámara secreta, marca la cédula con precisión física e introduce el voto en el ánfora; el juego registra y procesa el voto final en la base de datos MySQL para actualizar un escrutinio global en tiempo real.
+                </div>
+            </div>
+
+            <div class="game-item" style="border-left: 5px solid #27ae60;">
+                <div class="game-title">2. El Guardián del Éxodo Peatonal (Cruce Seguro en la Autopista) <span class="badge">Nuevo</span></div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Controlando a un brigadista en la avenida Sánchez Cerro, el jugador debe tomar de la mano a ancianos que avanzan lento y ayudarlos a cruzar el Canvas de extremo a extremo, esquivando automóviles y mototaxis cuyos vectores de velocidad varían.<br>
+                    <strong>Nivel 2:</strong> El desafío se traslada a una autopista interprovincial de alta velocidad en la salida a Sullana, asistiendo a niños en edad escolar. Se incorporan dinámicas de clima (viento y polvo) y semáforos manuales sincronizados que alteran el comportamiento del tráfico vehicular.
+                </div>
+            </div>
+
+            <!-- Gastronomía -->
+            <div class="game-item">
+                <div class="game-title">3. El Maestro Cevichero de Máncora</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Cortar el pescado en cubos simétricos cayendo en cascada en la pantalla, esquivando las espinas.<br>
+                    <strong>Nivel 2:</strong> Exprimir limones de Chulucanas evitando las pepas ácidas y verter el ají limo en la proporción exacta indicada por la barra indicadora.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">4. El Secreto de la Causa Piurana</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Prensar la papa amarilla mediante pulsaciones rítmicas de teclas para conseguir una textura homogénea.<br>
+                    <strong>Nivel 2:</strong> Emplatar capturando ingredientes suspendidos (huevo, aceituna verde, escabeche) en el orden lineal correcto.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">5. Herencia del Seco de Chabelo</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Machacar el plátano verde frito en un batán virtual mediante clics de alta precisión antes de que se enfríe.<br>
+                    <strong>Nivel 2:</strong> Sofreír la carne aliñada regulando un termostato digital para evitar la carbonización por leña de algarrobo.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">6. El Punto del Clarito y la Chicha de Jora</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Desgranar maíz blanco del Bajo Piura arrastrando el cursor sobre un rodillo dentado en movimiento.<br>
+                    <strong>Nivel 2:</strong> Controlar la tasa de fermentación en tinajas de barro añadiendo agua o chancaca según los gases simulados en la interfaz.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">7. Tamales de la Abuela Catacaos</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Moler el maíz tierno esquivando impurezas y piedras de río que caen por la tolva del molino manual.<br>
+                    <strong>Nivel 2:</strong> Envolver la masa homogénea en hojas de plátano trazando patrones geométricos con el ratón.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">8. Copús Bajo la Tierra</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Cavar un pozo térmico uniforme y recolectar las piedras calientes correctas descartando tierra húmeda.<br>
+                    <strong>Nivel 2:</strong> Organizar capas de pavo, cabrito y camotes, sellando el horno herméticamente antes de que disminuya la temperatura crítica.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">9. El Horneado del Pavo de Fiesta</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Marinar la pieza entera atrapando condimentos tradicionales en caída libre (chicha de jora, ají panca, comino).<br>
+                    <strong>Nivel 2:</strong> Monitorear la cocción en un horno de barro artesanal impidiendo que las corrientes de aire apaguen las brasas.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">10. Natillas de San Clemente</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Ordeñar cabras en un entorno interactivo basado en barras de ritmo y sincronización de comandos.<br>
+                    <strong>Nivel 2:</strong> Batir la mezcla de leche y chancaca en pailas de bronce moviendo circularmente el cursor para prevenir adherencias.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">11. La Picantería Tradicional</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Servir "tote" (cancha) y vasos de clarito a mesas de clientes demandantes bajo un esquema de gestión de colas.<br>
+                    <strong>Nivel 2:</strong> Izar y defender la bandera blanca o roja en la fachada exterior sorteando las ráfagas intensas de viento norteño.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">12. Dulce de Guayaba de la Sierra</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Plataformas 2D donde se recolectan guayabas maduras trepando por las estribaciones arbóreas de Ayabaca.<br>
+                    <strong>Nivel 2:</strong> Hervir la pulpa controlando la densidad del almíbar esquivando proyecciones de burbujas calientes en el Canvas.
+                </div>
+            </div>
+
+            <!-- Agricultura y Ganadería -->
+            <div class="game-item">
+                <div class="game-title">13. Siembra de Arroz en Terreno Suave</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Canalizar los flujos de agua desde la acequia principal abriendo compuertas lógicas para inundar el fango de manera milimétrica.<br>
+                    <strong>Nivel 2:</strong> Insertar bálagos de arroz a intervalos equidistantes utilizando un temporizador cíclico de inserción.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">14. Siembra de Arroz en Terreno Duro</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Guiar una yunta de bueyes labrando surcos paralelos en tierra seca, esquivando peñascos subterráneos.<br>
+                    <strong>Nivel 2:</strong> Fragmentar bloques densos de arcilla con impactos consecutivos del mouse para preparar la cama de siembra.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">15. El Oro Blanco: Algodón Pima</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Extraer copos limpios de algodón de las plantas evitando ramas secas y espinas punzantes.<br>
+                    <strong>Nivel 2:</strong> Apisonar el algodón recolectado dentro de sacos de yute industriales mediante saltos coordinados en pantalla.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">16. Pastor de Cabras en el Desierto de Sechura</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Agrupar y conducir un hato de cabras hacia un bosque de algarrobos eludiendo ataques del zorro costeño.<br>
+                    <strong>Nivel 2:</strong> Recoger las vainas de algarroba maduras esparcidas por el suelo arenoso para mantener estables los niveles de energía de las crías.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">17. Cosechador de Limón de Tambogrande</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Operar una pinza mecánica virtual para cortar mangos y limones óptimos descartando frutos con plagas.<br>
+                    <strong>Nivel 2:</strong> Clasificar la producción por calibres de exportación en fajas transportadoras de velocidad incremental.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">18. El Mango de Exportación de San Lorenzo</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Desprender mangos de la variedad Kent con una vara de recolección larga ("gandul") impidiendo impactos directos contra el suelo.<br>
+                    <strong>Nivel 2:</strong> Sumergir la fruta en tanques térmicos automatizados para el tratamiento hidrotérmico reglamentario.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">19. Cacao Blanco de Huancabamba</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Seccionar mazorcas de cacao criollo maduras usando cortes angulares precisos con un machete virtual.<br>
+                    <strong>Nivel 2:</strong> Desgranar las semillas almibaradas y disponerlas sobre camas de fermentación volteándolas a intervalos fijos.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">20. El Guardián de la Acequia</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Retirar sedimentos e impurezas antropogénicas de los canales del Río Piura antes del arribo de la cresta de avenida.<br>
+                    <strong>Nivel 2:</strong> Distribuir cuotas hídricas volumétricas ("mitas") entre parcelas colindantes respetando un reloj de asignación justa.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">21. La Cosecha del Banano Orgánico de Sullana</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Cortar racimos pendulares masivos y transportarlos balanceadamente sobre hombros digitales evitando caídas fatales.<br>
+                    <strong>Nivel 2:</strong> Colocar separadores plásticos de amortiguación en contenedores móviles para neutralizar el roce del transporte.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">22. Apicultura en el Bosque Seco</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Mitigar la agresividad de las abejas aplicando ráfagas dosificadas de humo sobre panales silvestres de algarrobo.<br>
+                    <strong>Nivel 2:</strong> Controlar una centrífuga de extracción controlando las revoluciones por minuto para no destruir las estructuras de cera.
+                </div>
+            </div>
+
+            <!-- Pesca y Costa -->
+            <div class="game-item">
+                <div class="game-title">23. Pesca Artesanal en Cabo Blanco</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Lanzar líneas de nylon desde peñascos rocosos sorteando el oleaje violento y la interferencia de mantarrayas.<br>
+                    <strong>Nivel 2:</strong> Batallar en tensión física contra un espécimen de mero o merlín mediante la pulsación intermitente de la barra espaciadora.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">24. El Viaje de los Balsares de Paita</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Ensamblar cordajes estructurales entrelazando haces densos de totora nativa para formar una embarcación flotante.<br>
+                    <strong>Nivel 2:</strong> Pilotar el balsa mar adentro esquivando corrientes de resaca y rompientes costeras críticas.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">25. Recolector de Conchas Negras en los Manglares</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Introducir el brazo virtual en cavidades profundas del fango esquivando ataques directos de cangrejos violinistas.<br>
+                    <strong>Nivel 2:</strong> Evaluar las conchas con un calibrador óptico; reintegrar al ecosistema aquellas menores a la talla mínima legal.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">26. Las Salinas de Sechura</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Distribuir agua de mar hiper-salina en pozas someras arrastrando palas articuladas mecánicamente con el ratón.<br>
+                    <strong>Nivel 2:</strong> Erigir montículos cónicos de sal cristalizada antes de la irrupción del viento racheado del desierto.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">27. Torneo de Surf en Máncora</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Nivelar el centro de gravedad de una tabla dinámica mediante vectores direccionales sobre una ola oscilante en Canvas.<br>
+                    <strong>Nivel 2:</strong> Ejecutar maniobras aéreas calculando ángulos trigonométricos parabólicos para reingresar limpiamente a la pared de agua.
+                </div>
+            </div>
+
+            <!-- Artesanía -->
+            <div class="game-item">
+                <div class="game-title">28. El Filigranista de Catacaos</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Trefilar metal precioso fundido estirándolo a través de hileras calibradas mediante un medidor de tensión interactivo.<br>
+                    <strong>Nivel 2:</strong> Interconectar filamentos microscópicos de plata sobre un molde base imitando la silueta de un pavo real clásico.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">29. Alfarero de Chulucanas</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Modelar siluetas ovoides de arcilla en un torno rotatorio acoplando la velocidad angular al ritmo del teclado.<br>
+                    <strong>Nivel 2:</strong> Aplicar reservas de barbotina líquida para aislar zonas de color antes del proceso de horneado reductor.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">30. El Secreto del Ahumado</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Abastecer el horno de Chulucanas con hojas seleccionadas de mango verde para generar el humo rico en carbono.<br>
+                    <strong>Nivel 2:</strong> Regular las compuertas de aireación para obtener la pátina negra brillante característica sobre la cerámica pulida.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">31. Tejedora de Sombreros de Paja Toquilla</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Procesar químicamente los cogollos de paja mediante ebullición controlada y posterior azufrado de blanqueamiento.<br>
+                    <strong>Nivel 2:</strong> Ejecutar patrones de tejido concéntrico alternando cruzamientos rápidos bajo un formato de memoria visual de secuencias.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">32. El Constructor de Botes de Astillero</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Calafatear juntas estructurales de madera insertando estopa impregnada en brea hirviente con herramientas virtuales.<br>
+                    <strong>Nivel 2:</strong> Rotular heráldica marina en la proa y deslizar la nave terminada sobre polines de madera hacia el plano del mar.
+                </div>
+            </div>
+
+            <!-- Mitos y Leyendas -->
+            <div class="game-item">
+                <div class="game-title">33. El Médico Curandero de Las Huaringas</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Ascender laderas verticales andinas recolectando plantas sagradas bajo condiciones de visibilidad nocturna reducida.<br>
+                    <strong>Nivel 2:</strong> Disponer la "mesada" ceremonial arrojando líquidos protectores ("floreos") y neutralizando entidades hostiles abstractas.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">34. El Encanto de la Laguna de Ramón</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Maniobrar una balsa de troncos eludiendo fuegos fatuos luminiscentes y vórtices hidráulicos repentinos.<br>
+                    <strong>Nivel 2:</strong> Bucear para rescatar reliquias de oro precolombino antes de que se agote la reserva de oxígeno del buzo.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">35. El Carretón de la Otra Vida</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Juego de carrera sin fin conduciendo un carruaje espectral por los arenales periféricos de la Piura antigua.<br>
+                    <strong>Nivel 2:</strong> Absorber fuegos fatuos de almas en pena antes del amanecer esquivando estructuras religiosas que restan energía.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">36. La Fiesta de los Reyes Magos de Narihualá</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Trazar una trayectoria desértica guiando una caravana mediante la triangulación visual de un astro guía.<br>
+                    <strong>Nivel 2:</strong> Recitar coplas populares emparejando fragmentos poéticos correctos en un juego tipográfico contrarreloj.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">37. Procesión del Señor de la Buena Muerte de Chocán</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Distribuir físicamente a los miembros de la hermandad según su estatura para estabilizar el centro de masa del anda.<br>
+                    <strong>Nivel 2:</strong> Avanzar por calles alfombradas con aserrín de colores ejecutando giros precisos para evadir cables y aleros coloniales.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">38. El Ritmo del Tondero</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Ejecutar la cadencia del calzado masculino/femenino presionando comandos sincrónicos coordinados con el repique de cajón.<br>
+                    <strong>Nivel 2:</strong> Desplegar el pañuelo virtual para esquivar los careos y aproximaciones de la pareja de baile dentro del Canvas.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">39. El Enigma del Cerro Pilán</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Conducir un vehículo esquivando espejismos cinéticos generados artificialmente por las aberraciones físicas del relieve costero.<br>
+                    <strong>Nivel 2:</strong> Escapar de un laberinto con campos electromagnéticos variables donde los vectores del mapa se invierten periódicamente.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">40. Mangaches contra Planchaos</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Defender los linderos históricos de la Mangachería posicionando estratégicamente defensores armados con elementos tradicionales.<br>
+                    <strong>Nivel 2:</strong> Sostener un combate dialéctico de cumananas (rimas improvisadas) seleccionando el contraargumento de mayor valor métrico.
+                </div>
+            </div>
+
+            <!-- Fauna y Aventura -->
+            <div class="game-item">
+                <div class="game-title">41. El Vuelo del Cortarrama Peruano</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Controlar el vuelo horizontal estocástico de un ave cortarrama eludiendo líneas eléctricas de alta tensión en Talara.<br>
+                    <strong>Nivel 2:</strong> Localizar brotes tiernos de algarroba evadiendo la presencia de depredadores domésticos e invasivos.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">42. El Oso de Anteojos en los Bosques de Neblina</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Rastrear bulbos de orquídeas raras trepando por riscos húmedos de la sierra de Ayabaca con visibilidad intermitente.<br>
+                    <strong>Nivel 2:</strong> Desactivar cepos y trampas de cazadores furtivos cortando los cables tensores correctos en la pantalla.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">43. Sandboard en el Médano Blanco</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Descender vertiginosamente dunas empinadas de Sechura esquivando afloramientos de roca y plantas xerófitas.<br>
+                    <strong>Nivel 2:</strong> Ejecutar rotaciones angulares en el aire al salir eyectado de rampas naturales de arena compacta.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">44. El Cruce del Río Piura en Época de "El Niño"</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Propulsar balsas improvisadas con cámaras de llanta transportando civiles a contracorriente de un caudal desbordado.<br>
+                    <strong>Nivel 2:</strong> Rescatar animales domésticos atrapados en montículos aislados lanzando un lazo con parábola física variable.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">45. Ruta en Mototaxi a Colán</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Conducir un vehículo ligero de tres ruedas sorteando baches profundos, calaminas viales y ganado caprino suelto.<br>
+                    <strong>Nivel 2:</strong> Efectuar maniobras de aparcamiento de precisión geométrica en el estrecho malecón de madera sobre pilotes.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">46. Cetáceos en El Ñuro</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Navegar embarcaciones turísticas rastreando las emisiones de vapor y estelas hidrodinámicas de ballenas jorobadas.<br>
+                    <strong>Nivel 2:</strong> Capturar registros fotográficos instantáneos ganando puntos según el centrado y la nitidez del encuadre en el salto del animal.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">47. El Escape de la Serpiente Macanche</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Deslizar un ofidio nativo entre la arena del desierto buscando la cobertura térmica provista por arbustos de zapote.<br>
+                    <strong>Nivel 2:</strong> Evadir las pisadas y cascos de arrieros en tránsito ocultándose rápidamente en grietas del terreno arcilloso.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">48. Travesía 4x4 en los Médanos de Sechura</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Pilotar una camioneta todoterreno sobre crestas de dunas móviles dosificando el acelerador para no fundir el motor por calor.<br>
+                    <strong>Nivel 2:</strong> Liberar los ejes enterrados en arena floja aplicando rampas de tracción mediante clics intensivos coordinados.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">49. El Misterio de la Huaca Narihualá</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Explorar corredores laberínticos de adobe de la cultura Tallán esquivando derrumbes e inventariando fragmentos cerámicos.<br>
+                    <strong>Nivel 2:</strong> Recomponer vasijas tridimensionales uniendo sus aristas vectoriales en un espacio interactivo de Canvas.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">50. Defensores del Algarrobal</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Interceptar camiones clandestinos de carbón vegetal arrojándoles obstáculos biodegradables para neutralizar su avance.<br>
+                    <strong>Nivel 2:</strong> Sembrar plántulas de algarrobo y bombear agua manual antes de que la evaporación solar extrema elimine los brotes.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">51. La Pava Aliblanca Regresa a Casa</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Sortear quebradas secas y tendidos de alambre de púas en vuelo planeado, recolectando frutos endémicos de la sierra.<br>
+                    <strong>Nivel 2:</strong> Ubicar un emplazamiento seguro para anidar esquivando los patrones de patrullaje de gatos monteses hambrientos.
+                </div>
+            </div>
+
+            <div class="game-item">
+                <div class="game-title">52. El Desafío del Chilalo Constructor</div>
+                <div class="game-levels">
+                    <strong>Nivel 1:</strong> Recolectar porciones exactas de lodo plástico y paja seca formadas tras precipitaciones fluviales excepcionales.<br>
+                    <strong>Nivel 2:</strong> Modelar la estructura esférica y abovedada del nido en un árbol de algarrobo, aplicando capas uniformes sin colapsar la base.
+                </div>
+            </div>
+        </div>
+
+        <h2>3. Matriz de Evaluación Basada en Rúbricas (Escala de 20 Puntos)</h2>
+        <p>La evaluación del proyecto de desarrollo se rige por cuatro criterios fundamentales, ponderados con un peso específico equivalente de 5 puntos cada uno, totalizando la nota vigesimal máxima (20):</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Criterio de Evaluación</th>
+                    <th>Excelente (5 pts)</th>
+                    <th>Satisfactorio (3-4 pts)</th>
+                    <th>En Progreso (1-2 pts)</th>
+                    <th>Deficiente (0 pts)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Mecánica del Canvas y Lógica de 2 Niveles</strong></td>
+                    <td>El bucle principal (<em>Game Loop</em>) es fluido a 60 FPS. El Nivel 1 y el Nivel 2 poseen mecánicas claramente diferenciadas, escalado de dificultad matemática coherente y colisiones de vectores sin fallos.</td>
+                    <td>El juego opera de forma interactiva pero presenta caídas aisladas en la tasa de refresco. La transición entre ambos niveles funciona, aunque las mecánicas carecen de un cambio sustancial en su lógica.</td>
+                    <td>Presenta fallos estructurales en la detección de colisiones. Solo es jugable el primer nivel o la transición de estados rompe el ciclo de ejecución de la aplicación web.</td>
+                    <td>No inicializa el lienzo Canvas, faltan los controladores de eventos principales (<span class="math-code">EventListener</span>) o carece por completo de lógica lúdica.</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Integración y Persistencia MySQL</strong></td>
+                    <td>Conexión asíncrona perfecta usando la API Fetch nativa. Transfiere de manera segura variables validadas y registra de forma consistente el récord en MySQL mediante sentencias preparadas contra inyección SQL.</td>
+                    <td>Consigue conectarse con la base de datos y almacenar los récords, pero emplea arquitecturas síncronas obsoletas que congelan el hilo de ejecución del Canvas o carece de filtros de seguridad.</td>
+                    <td>El backend intenta comunicarse con la base de datos MySQL, pero la petición web devuelve errores HTTP constantes (ej. 500 o 404) debido a inconsistencias en el esquema de datos.</td>
+                    <td>Ausencia total de mecanismos de persistencia de datos. Los puntajes mueren al refrescar la ventana del navegador. No existe código de backend.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Identidad Cultural y Contexto Regional</strong></td>
+                    <td>La narrativa, la estética de los recursos en Canvas y las mecánicas lúdicas reflejan fidedignamente la costumbre de Piura asignada, mostrando un valor educativo y etnográfico notable.</td>
+                    <td>El juego se asocia al tema de la región Piura seleccionado, pero los elementos gráficos o las mecánicas son genéricos y podrían sustituirse por cualquier otro contexto geográfico sin alterar el juego.</td>
+                    <td>La temática norteña es meramente superficial (ej. solo el título del juego). Las dinámicas internas contradicen o desvirtúan la realidad de la costumbre tradicional descrita.</td>
+                    <td>No guarda ninguna relación con las tradiciones, geografía o costumbres piuranas solicitadas en las especificaciones del proyecto.</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Estructura de Código y Despliegue en GitHub</strong></td>
+                    <td>Código limpio, modularizado y documentado. Repositorio en GitHub estructurado bajo buenas prácticas, con historial de confirmaciones (<em>commits</em>) transparente y archivo README técnico detallado.</td>
+                    <td>El código fuente está concentrado en un único bloque denso sin modularización, pero es legible. El repositorio existe en GitHub aunque cuenta con pocas confirmaciones o documentación escueta.</td>
+                    <td>Código confuso, sin comentarios y con variables mal nombradas. El repositorio de GitHub carece de estructura organizada o se cargó en un único bloque masivo al final.</td>
+                    <td>No se entregó el código fuente a través de la plataforma GitHub o los archivos compartidos están dañados e impiden la revisión del software.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4. Guía de Despliegue y Publicación en GitHub</h2>
+        <p>Para alojar el proyecto de forma pública haciendo uso de las herramientas integradas de control de versiones, ejecute de forma ordenada la siguiente secuencia de comandos en la terminal de desarrollo:</p>
+        <ol>
+            <li>Inicializar el repositorio git local en el directorio raíz del videojuego: <br><span class="math-code">git init</span></li>
+            <li>Vincular el entorno local con el repositorio remoto previamente creado en su cuenta de GitHub:<br><span class="math-code">git remote add origin https://github.com/SU_USUARIO/SU_REPOSITORIO.git</span></li>
+            <li>Añadir todos los archivos del proyecto al área de preparación (<em>Staging Area</em>):<br><span class="math-code">git add .</span></li>
+            <li>Confirmar los cambios capturando el estado inicial de la aplicación:<br><span class="math-code">git commit -m "Feat: Implementación del Game Loop en Canvas e integración de persistencia asíncrona"</span></li>
+            <li>Desplazar las confirmaciones de código hacia la rama de producción remota:<br><span class="math-code">git push -u origin main</span></li>
+            <li><strong>Activación del Hosting Gratuito (GitHub Pages):</strong> Acceda a la interfaz web de su repositorio en GitHub, diríjase a <span class="math-code">Settings</span> &gt; <span class="math-code">Pages</span>, seleccione la rama <span class="math-code">main</span> como origen de despliegue y presione <span class="math-code">Save</span>. En pocos minutos, el videojuego se ejecutará en vivo bajo una URL pública.</li>
+        </ol>
+
+        <div class="footer">
+            Manual de Ingeniería y Desarrollo Web - Formato de Publicación para Repositorios Académicos. 2026.
+        </div>
+    </div>
+
+</body>
+</html>
